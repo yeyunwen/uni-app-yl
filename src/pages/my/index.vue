@@ -80,6 +80,7 @@ const serveList = [
   {
     text: "我的家人",
     imgUrl: "/static/images/my/8.png",
+    path: "/pages/my/family/index",
   },
   {
     text: "我的发票",

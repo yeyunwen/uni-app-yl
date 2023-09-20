@@ -27,7 +27,7 @@ page {
   background-color: $bg-color-grey;
 }
 .report {
-  padding: $page-padding;
+  padding: $content-padding;
   .report-list {
     .report-item {
       margin-bottom: 20rpx;

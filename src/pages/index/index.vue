@@ -77,13 +77,17 @@ export default {
 };
 </script>
 
+<style lang="scss">
+page {
+  background-color: $bg-color-grey;
+}
+</style>
 <style lang="scss" scoped>
 .tile {
   border-radius: 10rpx;
   background-color: #fff;
 }
 .index {
-  background-color: #f0f1f5;
   background-image: url(http://localhost:3000/static/images/bg-1.jpg);
   background-size: 100% 100%;
   .index-container {

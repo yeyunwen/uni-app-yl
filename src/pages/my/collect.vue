@@ -23,6 +23,6 @@ page {
   background-color: $bg-color-grey;
 }
 .collect {
-  padding: $page-padding;
+  padding: $content-padding;
 }
 </style>

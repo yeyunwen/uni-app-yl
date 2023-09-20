@@ -1,99 +1,116 @@
 {
-	"easycom": {
-		"autoscan": true,
-		"custom": {
-			// uni-ui 规则如下配置
-			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
-			"^cl-(.*)": "@/components/cl-$1.vue"
-		}
-	},
-	"pages": [
-		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/science/index",
-			"style": {
-				"navigationBarTitleText": "科普"
-			}
-		},
-		{
-			"path": "pages/message/index",
-			"style": {
-				"navigationBarTitleText": "消息"
-			}
-		},
-		{
-			"path": "pages/my/index",
-			"style": {
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/my/collect",
-			"style": {
-				"navigationBarTitleText": "收藏医生"
-			}
-		},
-		{
-			"path": "pages/my/report/index",
-			"style": {
-				"navigationBarTitleText": "报告解读"
-			}
-		}
-	],
-	"tabBar": {
-		"color": "#8a8a8a",
-		"selectedColor": "#1296DB",
-		"backgroundColor": "#fff",
-		"borderStyle": "white",
-		"list": [{
-				"pagePath": "pages/index/index",
-				"text": "问医生",
-				"iconPath": "static/images/tabs/doctor.png",
-				"selectedIconPath": "static/images/tabs/doctor-active.png"
-			},
-			{
-				"pagePath": "pages/science/index",
-				"text": "科普",
-				"iconPath": "static/images/tabs/science.png",
-				"selectedIconPath": "static/images/tabs/science-active.png"
-			},
-			{
-				"pagePath": "pages/message/index",
-				"text": "消息",
-				"iconPath": "static/images/tabs/message.png",
-				"selectedIconPath": "static/images/tabs/message-active.png"
-			},
-			{
-				"pagePath": "pages/my/index",
-				"text": "我的",
-				"iconPath": "static/images/tabs/my.png",
-				"selectedIconPath": "static/images/tabs/my-active.png"
-			}
-		]
-	},
-	"condition": {
-		"current": 1,
-		"list": [
-			{
-			"name": "消息",
-			"path": "pages/message/index"
-			},
-			{
-			"name": "我的",
-			"path": "pages/my/index"
-			}
-	]
-	},
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // uni-ui 规则如下配置
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+      "^cl-(.*)": "@/components/cl-$1.vue"
+    }
+  },
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/science/index",
+      "style": {
+        "navigationBarTitleText": "科普"
+      }
+    },
+    {
+      "path": "pages/message/index",
+      "style": {
+        "navigationBarTitleText": "消息"
+      }
+    },
+    {
+      "path": "pages/my/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/my/collect",
+      "style": {
+        "navigationBarTitleText": "收藏医生"
+      }
+    },
+    {
+      "path": "pages/my/report/index",
+      "style": {
+        "navigationBarTitleText": "报告解读"
+      }
+    },
+    {
+      "path": "pages/my/family/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/my/family/add",
+      "style": {
+        "navigationBarTitleText": "添加家人"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296DB",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "问医生",
+        "iconPath": "static/images/tabs/doctor.png",
+        "selectedIconPath": "static/images/tabs/doctor-active.png"
+      },
+      {
+        "pagePath": "pages/science/index",
+        "text": "科普",
+        "iconPath": "static/images/tabs/science.png",
+        "selectedIconPath": "static/images/tabs/science-active.png"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "text": "消息",
+        "iconPath": "static/images/tabs/message.png",
+        "selectedIconPath": "static/images/tabs/message-active.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/images/tabs/my.png",
+        "selectedIconPath": "static/images/tabs/my-active.png"
+      }
+    ]
+  },
+  "condition": {
+    "current": 2,
+    "list": [
+      {
+        "name": "消息",
+        "path": "pages/message/index"
+      },
+      {
+        "name": "我的",
+        "path": "pages/my/index"
+      },
+      {
+        "name": "我的家人",
+        "path": "pages/my/family/index"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
 }

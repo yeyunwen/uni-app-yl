@@ -1,6 +1,6 @@
 <template>
   <view class="family">
-    <cl-nav-bar title="我的家人"></cl-nav-bar>
+    <cl-nav-bar title="我的家人" leftIcon></cl-nav-bar>
     <view class="family-content">
       <view class="add">
         <image src="/static/images/bg-2.png" mode="aspectFill" />

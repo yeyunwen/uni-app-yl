@@ -1,8 +1,8 @@
 <template>
   <view class="navbar" :style="{ paddingTop: safeAreaInsets.top + 'px' }">
-    <view class="navbar-btns" @click="onLeftClick">
+    <view class="navbar-btns navbar-left" @click="onLeftClick">
       <slot name="left">
-        <i class="iconfont icon-fanhui" v-if="leftIcon"></i>
+        <uni-icons type="left" size="24" v-if="leftIcon" />
         <view class="navbar-btns-text" v-if="leftText.length > 0">
           {{ leftText }}
         </view>
@@ -64,10 +64,11 @@ export default {
 $nav-height: 44px;
 
 .navbar {
-  height: $nav-height;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: $content-padding-left-right;
+  height: $nav-height;
   color: #000;
   position: relative;
 
@@ -77,6 +78,10 @@ $nav-height: 44px;
     justify-content: center;
     align-items: center;
     height: $nav-height;
+  }
+
+  .navbar-left {
+    justify-content: flex-start;
   }
 
   .title {

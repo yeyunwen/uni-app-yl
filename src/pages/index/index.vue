@@ -1,6 +1,6 @@
 <template>
   <view class="index">
-    <custom-navbar title="问医生"></custom-navbar>
+    <cl-nav-bar title="问医生"></cl-nav-bar>
 
     <view class="index-container">
       <view class="search">
@@ -51,7 +51,6 @@
 </template>
 
 <script>
-import customNavbar from "@/components/customNavbar.vue";
 import { moduleList } from "@/common/constant";
 
 const swiperList = [
@@ -67,9 +66,6 @@ const swiperList = [
 ];
 
 export default {
-  components: {
-    customNavbar,
-  },
   data() {
     return {
       searchVal: "",

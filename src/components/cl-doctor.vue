@@ -48,7 +48,7 @@ export default {};
 .doctor-item {
   display: flex;
   padding: 20rpx;
-  margin-bottom: 10px;
+  margin-bottom: 20rpx;
   background: #fff;
   .avatar {
     margin-right: 20rpx;

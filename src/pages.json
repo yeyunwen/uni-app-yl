@@ -12,7 +12,6 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页",
 				"navigationStyle": "custom"
 			}
 		},
@@ -31,7 +30,19 @@
 		{
 			"path": "pages/my/index",
 			"style": {
-				"navigationBarTitleText": "我的"
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/collect",
+			"style": {
+				"navigationBarTitleText": "收藏医生"
+			}
+		},
+		{
+			"path": "pages/my/report/index",
+			"style": {
+				"navigationBarTitleText": "报告解读"
 			}
 		}
 	],
@@ -65,6 +76,19 @@
 				"selectedIconPath": "static/images/tabs/my-active.png"
 			}
 		]
+	},
+	"condition": {
+		"current": 1,
+		"list": [
+			{
+			"name": "消息",
+			"path": "pages/message/index"
+			},
+			{
+			"name": "我的",
+			"path": "pages/my/index"
+			}
+	]
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

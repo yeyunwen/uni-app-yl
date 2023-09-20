@@ -2,13 +2,14 @@
   <view class="family">
     <cl-nav-bar title="我的家人" leftIcon></cl-nav-bar>
     <view class="family-content">
-      <view class="add">
+      <view class="add" @tap="goToAdd()">
         <image src="/static/images/bg-2.png" mode="aspectFill" />
       </view>
       <view class="member-list">
         <view
           v-for="(item, index) in memberList"
           :key="index"
+          @tap="goToAdd(item.desc)"
           class="member-item"
         >
           <cl-info :infoData="item"></cl-info>
@@ -62,6 +63,13 @@ export default {
       ],
     };
   },
+  methods: {
+    goToAdd(id) {
+      uni.navigateTo({
+        url: `/pages/my/family/add?id=${id}`,
+      });
+    },
+  },
 };
 </script>
 
@@ -83,6 +91,7 @@ page {
       border: 2rpx solid #0985f2;
       background: #c9e7ff;
       image {
+        display: block;
         width: 715rpx;
         height: 185rpx;
       }

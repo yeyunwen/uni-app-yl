@@ -61,13 +61,6 @@ export default {};
   .content {
     flex: 1;
     font-size: 14px;
-    .line {
-      display: inline-block;
-      margin: 0 10rpx;
-      width: 5rpx;
-      height: 18rpx;
-      background-color: #797979;
-    }
     .info {
       margin-bottom: 10rpx;
       color: #797979;

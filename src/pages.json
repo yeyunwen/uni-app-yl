@@ -91,7 +91,7 @@
     ]
   },
   "condition": {
-    "current": 2,
+    "current": 3,
     "list": [
       {
         "name": "消息",
@@ -104,6 +104,10 @@
       {
         "name": "我的家人",
         "path": "pages/my/family/index"
+      },
+      {
+        "name": "科普",
+        "path": "pages/science/index"
       }
     ]
   },

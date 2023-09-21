@@ -22,12 +22,11 @@
         mode="scaleToFill"
       />
       <view class="content">
-        <view class="name">{{ name }}</view>
+        <view class="name">
+          <slot name="name">{{ name }}</slot>
+        </view>
         <view class="desc">
-          <view v-if="desc">{{ desc }}</view>
-          <view v-else>
-            <slot name="desc"></slot>
-          </view>
+          <slot name="desc">{{ desc }}</slot>
         </view>
       </view>
       <view class="right">

@@ -12,7 +12,13 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationStyle": "custom"
+        "navigationStyle": "custom" // 问医生
+      }
+    },
+    {
+      "path": "pages/doctor/index",
+      "style": {
+        "navigationStyle": "custom" // 医生详情
       }
     },
     {
@@ -42,7 +48,7 @@
     {
       "path": "pages/my/index",
       "style": {
-        "navigationStyle": "custom"
+        "navigationStyle": "custom" // 我的
       }
     },
     {
@@ -60,7 +66,7 @@
     {
       "path": "pages/my/family/index",
       "style": {
-        "navigationStyle": "custom"
+        "navigationStyle": "custom" // 我的家人
       }
     },
     {
@@ -103,7 +109,7 @@
     ]
   },
   "condition": {
-    "current": 3,
+    "current": 4,
     "list": [
       {
         "name": "消息",
@@ -120,6 +126,10 @@
       {
         "name": "科普",
         "path": "pages/science/index"
+      },
+      {
+        "name": "医生详情",
+        "path": "pages/doctor/index"
       }
     ]
   },

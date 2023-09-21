@@ -42,7 +42,12 @@
       </view>
 
       <view class="doctor-list">
-        <view class="doctor-item" v-for="(item, index) in 4" :key="index">
+        <view
+          class="doctor-item"
+          v-for="(item, index) in 4"
+          :key="index"
+          @click="goToDetail"
+        >
           <cl-doctor></cl-doctor>
         </view>
       </view>
@@ -73,7 +78,13 @@ export default {
       swiperList,
     };
   },
-  methods: {},
+  methods: {
+    goToDetail() {
+      uni.navigateTo({
+        url: "/pages/doctor/index",
+      });
+    },
+  },
 };
 </script>
 

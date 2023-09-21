@@ -15,7 +15,7 @@
       </cl-info>
     </view>
     <view class="article-detail">
-      <rich-text :nodes="a"></rich-text>
+      <rich-text :nodes="nodes"></rich-text>
     </view>
   </view>
 </template>

@@ -18,6 +18,7 @@
           class="science-item tile"
           v-for="item in scienceList"
           :key="item.id"
+          @click="goToDeatil(item.type, item.id)"
         >
           <view class="header">
             <image :src="item.avatarUrl" mode="scaleToFill" />
@@ -169,6 +170,13 @@ export default {
   methods: {
     changeType(type) {
       this.currenntType = type;
+    },
+    goToDeatil(type, id) {
+      const deatilType = type === 0 ? "article" : "video";
+      const url = `/pages/science/detail/${deatilType}?id=${id}`;
+      uni.navigateTo({
+        url,
+      });
     },
   },
 };

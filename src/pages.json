@@ -22,6 +22,18 @@
       }
     },
     {
+      "path": "pages/science/detail/article",
+      "style": {
+        "navigationBarTitleText": "文章详情"
+      }
+    },
+    {
+      "path": "pages/science/detail/video",
+      "style": {
+        "navigationBarTitleText": "视频详情"
+      }
+    },
+    {
       "path": "pages/message/index",
       "style": {
         "navigationBarTitleText": "消息"

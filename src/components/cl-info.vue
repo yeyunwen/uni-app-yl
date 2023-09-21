@@ -1,14 +1,42 @@
 <template>
   <view class="cl-info tile">
-    <image
-      :src="infoData.imgUrl ? infoData.imgUrl : '/static/images/avatar.png'"
-      mode="scaleToFill"
-    />
-    <view class="content">
-      <view class="name">{{ infoData.name }}</view>
-      <view class="desc">{{ infoData.desc }}</view>
-    </view>
-    <view class="right">{{ infoData.right }}</view>
+    <template v-if="infoData">
+      <image
+        :src="infoData.imgUrl ? infoData.imgUrl : '/static/images/avatar.png'"
+        mode="scaleToFill"
+      />
+      <view class="content">
+        <view class="name">{{ infoData.name }}</view>
+        <view class="desc">{{ infoData.desc }}</view>
+      </view>
+      <view class="right">
+        <view v-if="infoData.right">{{ infoData.right }}</view>
+        <view v-else>
+          <slot name="right"></slot>
+        </view>
+      </view>
+    </template>
+    <template v-else>
+      <image
+        :src="imgUrl ? imgUrl : '/static/images/avatar.png'"
+        mode="scaleToFill"
+      />
+      <view class="content">
+        <view class="name">{{ name }}</view>
+        <view class="desc">
+          <view v-if="desc">{{ desc }}</view>
+          <view v-else>
+            <slot name="desc"></slot>
+          </view>
+        </view>
+      </view>
+      <view class="right">
+        <view v-if="right">{{ right }}</view>
+        <view v-else>
+          <slot name="right"></slot>
+        </view>
+      </view>
+    </template>
   </view>
 </template>
 
@@ -20,6 +48,18 @@ export default {
       validator(value) {
         return typeof value.name === "string" && typeof value.desc === "string";
       },
+    },
+    imgUrl: {
+      type: String,
+    },
+    name: {
+      type: String,
+    },
+    desc: {
+      type: String,
+    },
+    right: {
+      type: String,
     },
   },
 };

@@ -11,7 +11,7 @@
           <text class="money">￥{{ item.money }}/次</text>
         </template>
         <template #right>
-          <view class="btns">
+          <view class="btns" @click="goToConsultation()">
             去咨询
             <uni-icons type="right" color="#fff" size="14" />
           </view>
@@ -45,6 +45,13 @@ export default {
     return {
       consultationList,
     };
+  },
+  methods: {
+    goToConsultation() {
+      uni.navigateTo({
+        url: "/pages/doctor/consultation",
+      });
+    },
   },
 };
 </script>

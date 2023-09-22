@@ -22,6 +22,18 @@
       }
     },
     {
+      "path": "pages/doctor/register",
+      "style": {
+        "navigationBarTitleText": "预约时间"
+      }
+    },
+    {
+      "path": "pages/doctor/consultation",
+      "style": {
+        "navigationBarTitleText": "问诊描述"
+      }
+    },
+    {
       "path": "pages/science/index",
       "style": {
         "navigationBarTitleText": "科普"

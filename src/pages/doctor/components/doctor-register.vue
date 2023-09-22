@@ -5,6 +5,7 @@
         class="register-item"
         v-for="(item, index) in registerList"
         :key="index"
+        @click="goToRegister()"
       >
         <view class="left" :class="[item.state > 0 ? '' : 'none']">
           <text class="left-item">{{ item.datetime }}</text>
@@ -52,6 +53,13 @@ export default {
     return {
       registerList,
     };
+  },
+  methods: {
+    goToRegister() {
+      uni.navigateTo({
+        url: "/pages/doctor/register",
+      });
+    },
   },
 };
 </script>

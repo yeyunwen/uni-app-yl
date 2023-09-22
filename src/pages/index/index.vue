@@ -46,7 +46,7 @@
           class="doctor-item"
           v-for="item in doctorList"
           :key="item.id"
-          @click="goToDetail"
+          @click="goToDetail(item.id)"
         >
           <cl-doctor :doctorData="item"></cl-doctor>
         </view>
@@ -89,9 +89,9 @@ export default {
         this.doctorList = res.data;
       });
     },
-    goToDetail() {
+    goToDetail(id) {
       uni.navigateTo({
-        url: "/pages/doctor/index",
+        url: `/pages/doctor/index?id=${id}`,
       });
     },
     goToSearch() {

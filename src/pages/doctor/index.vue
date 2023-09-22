@@ -3,7 +3,7 @@
     <cl-nav-bar title="医生详情" leftIcon></cl-nav-bar>
     <view class="doctor-content">
       <view class="doctor-info">
-        <cl-doctor></cl-doctor>
+        <cl-doctor :doctorData="infoDetail"></cl-doctor>
       </view>
       <view class="tabs-container tile">
         <view class="tabs-header">
@@ -62,8 +62,13 @@ import doctorConsultation from "./components/doctor-consultation.vue";
 import doctorScience from "./components/doctor-science.vue";
 import moreScience from "./components/more-science.vue";
 import doctorRegister from "./components/doctor-register.vue";
+import { getInfoDetail } from "@api/doctor";
 
 export default {
+  onLoad(options) {
+    const { id } = options;
+    this.getInfoDetail(id);
+  },
   components: {
     doctorConsultation,
     doctorScience,
@@ -74,6 +79,7 @@ export default {
     return {
       currentType: 0,
       tabList,
+      infoDetail: {},
     };
   },
   computed: {
@@ -88,6 +94,11 @@ export default {
   methods: {
     changeType(type) {
       this.currentType = type;
+    },
+    getInfoDetail(id) {
+      getInfoDetail(id).then((res) => {
+        this.infoDetail = res.data;
+      });
     },
   },
 };

@@ -6,13 +6,13 @@
         v-for="(item, index) in registerList"
         :key="index"
       >
-        <view class="left">
-          <text class="datetime">{{ item.datetime }}</text>
-          <text class="day">{{ item.day }}</text>
-          <text class="btn">{{ item.cnDay }}</text>
+        <view class="left" :class="[item.state > 0 ? '' : 'none']">
+          <text class="left-item">{{ item.datetime }}</text>
+          <text class="left-item">{{ item.day }}</text>
+          <text class="left-item btn">{{ item.cnDay }}</text>
         </view>
-        <view class="right">
-          <view class="btn">{{ item.state }}</view>
+        <view class="right" :class="[item.state > 0 ? '' : 'none']">
+          <view class="btn">{{ item.state > 0 ? "预约" : "无号" }}</view>
         </view>
       </view>
     </view>
@@ -60,8 +60,34 @@ export default {
 .register {
   .register-list {
     .register-item {
+      padding: 30rpx 20px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      .btn {
+        color: #ccc;
+        padding: 5rpx 10rpx;
+        border-radius: 10rpx;
+        background-color: $bg-color-grey;
+      }
+      .left {
+        &.none {
+          color: #ccc;
+        }
+        .left-item {
+          margin-right: 50rpx;
+        }
+      }
+      .right {
+        &.none .btn {
+          color: #ccc;
+          background-color: $bg-color-grey;
+        }
+        .btn {
+          color: #fff;
+          background-color: $color-primary;
+        }
+      }
     }
   }
 }

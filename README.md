@@ -24,5 +24,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### todo list
 
-- [] 科普内容要怎么拆分为组件
-- [] 全局样式的完善
+- [ ] 科普内容要怎么拆分为组件
+- [ ] 全局样式的完善

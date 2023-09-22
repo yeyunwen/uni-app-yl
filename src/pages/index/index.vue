@@ -3,9 +3,9 @@
     <cl-nav-bar title="问医生"></cl-nav-bar>
 
     <view class="index-container">
-      <view class="search">
+      <view class="search" @click="goToSearch()">
         <uni-icons type="search" size="20" />
-        <input v-model="searchVal" />
+        <!-- <input v-model="searchVal" /> -->
       </view>
 
       <view class="fast">
@@ -82,6 +82,11 @@ export default {
     goToDetail() {
       uni.navigateTo({
         url: "/pages/doctor/index",
+      });
+    },
+    goToSearch() {
+      uni.navigateTo({
+        url: "/pages/index/search",
       });
     },
   },

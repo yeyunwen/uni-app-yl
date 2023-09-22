@@ -6,13 +6,13 @@
     <view class="content">
       <view class="info">
         <view class="info-item1">
-          <text class="name">李阳</text>
-          <text class="title">主任医生</text>
+          <text class="name">{{ doctorData.name }}</text>
+          <text class="title">{{ doctorData.job }}</text>
         </view>
         <view class="info-item2">
-          <text class="address">中医药大学第一附属医院</text>
+          <text class="address">{{ doctorData.hospital }}</text>
           <text class="line"></text>
-          <text class="department">中医内科</text>
+          <text class="department">{{ doctorData.department }}</text>
         </view>
       </view>
       <view class="score">
@@ -20,28 +20,32 @@
           <view class="label">
             <image src="/static/images/star.png" mode="scaleToFill" />
           </view>
-          <view class="value">4.8</view>
+          <view class="value">{{ doctorData.score }}</view>
         </view>
         <view class="item">
           <view class="label">服务数</view>
-          <view class="value">100</view>
+          <view class="value">{{ doctorData.serviceNum }}</view>
         </view>
         <view class="item">
           <view class="label">好评率</view>
-          <view class="value">100</view>
+          <view class="value">{{ doctorData.goodCommentNum }}</view>
         </view>
       </view>
       <div class="speciality">
-        <text
-          >擅长：肾癌靶向治疗、体外靶向治疗、体外靶向治疗、体外外靶向治疗、脑供血不足、全身体....</text
-        >
+        <text>{{ doctorData.speciality }}</text>
       </div>
     </view>
   </view>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    doctorData: {
+      type: Object,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

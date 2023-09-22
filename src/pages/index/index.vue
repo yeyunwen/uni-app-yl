@@ -44,11 +44,11 @@
       <view class="doctor-list">
         <view
           class="doctor-item"
-          v-for="(item, index) in 4"
-          :key="index"
+          v-for="item in doctorList"
+          :key="item.id"
           @click="goToDetail"
         >
-          <cl-doctor></cl-doctor>
+          <cl-doctor :doctorData="item"></cl-doctor>
         </view>
       </view>
     </view>
@@ -57,6 +57,7 @@
 
 <script>
 import { moduleList } from "@/common/constant";
+import { getDoctorList } from "@api/doctor";
 
 const swiperList = [
   {
@@ -76,9 +77,18 @@ export default {
       searchVal: "",
       moduleList,
       swiperList,
+      doctorList: [],
     };
   },
+  created() {
+    this.getDoctorList();
+  },
   methods: {
+    getDoctorList() {
+      getDoctorList().then((res) => {
+        this.doctorList = res.data;
+      });
+    },
     goToDetail() {
       uni.navigateTo({
         url: "/pages/doctor/index",
